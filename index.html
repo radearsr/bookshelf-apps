@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+    <link rel="shortcut icon" href="assets/img/books.svg" type="image/x-icon" />
+    <title>Book Shelf Apps</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-title">
+          <h1>Book Shelf Apps</h1>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="header-content">
+        <div class="main-section">
+          <h1>Selamat Datang Di Book Shelf Apps</h1>
+          <p>
+            Atur buku anda dengan aplikasi book shelf, segera tambahkan buku
+            anda!!
+          </p>
+          <button class="btn-add">+ Tambahkan Buku</button>
+          <div class="search-box">
+            <form action="#" id="form-search">
+              <table class="table-search">
+                <td>
+                  <input
+                    type="search"
+                    name=""
+                    id="search-value"
+                    placeholder="Masukkan judul buku..."
+                    class="input-search"
+                  />
+                </td>
+                <td>
+                  <input type="submit" value="Cari!" class="btn-search" />
+                </td>
+              </table>
+            </form>
+          </div>
+        </div>
+
+        <div class="info-section">
+          <h2>Status Buku</h2>
+          <div class="content-info">
+            <div class="card">
+              <h3 class="title-card">Belum Dibaca</h3>
+              <p class="content-card" id="total-uncompleted">0</p>
+            </div>
+            <div class="card">
+              <h3 class="title-card">Total Buku</h3>
+              <p class="content-card" id="total-all-books">0</p>
+            </div>
+            <div class="card">
+              <h3 class="title-card">Sudah Dibaca</h3>
+              <p class="content-card" id="total-completed">0</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-contents">
+        <div class="content-item" id="unread">
+          <h2 class="item-title">Buku Belum Dibaca</h2>
+        </div>
+
+        <div class="content-item" id="already-read">
+          <h2 class="item-title">Buku Sudah Dibaca</h2>
+        </div>
+      </div>
+
+      <div class="overlay" id="popup-input">
+        <div class="input-data">
+          <h1>Tambah Buku</h1>
+          <span class="close">X</span>
+          <div class="alert-success" id="add-success">
+            <h2>Berhasil menambahkan buku!</h2>
+          </div>
+          <form class="form" action="#" id="form">
+            <div class="form-group">
+              <label for="book-name">Nama Buku</label>
+              <input
+                class="form-input"
+                type="text"
+                name="title"
+                id="book-name"
+                autocomplete="off"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="author">Pengarang</label>
+              <input
+                class="form-input"
+                type="text"
+                name="author"
+                id="author"
+                autocomplete="off"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="year">Tahun</label>
+              <input class="form-input" type="number" name="date" id="year" />
+            </div>
+
+            <div class="form-group">
+              <label class="label-check" for="checkbtn">Selesai dibaca</label>
+              <input
+                class="check-button"
+                type="checkbox"
+                name="status"
+                id="checkbtn"
+              />
+            </div>
+
+            <input type="submit" value="Simpan" class="btn-submit" />
+          </form>
+        </div>
+      </div>
+
+      <div class="overlay" id="popup-confirm">
+        <div class="popup-area">
+          <h3 class="title-popup">Konfirmasi</h3>
+          <p class="msg">Apakah anda yakin akan menghapus data ini?</p>
+
+          <table class="details-popup">
+            <tr>
+              <th>Judul</th>
+              <td id="del-title"></td>
+            </tr>
+            <tr>
+              <th>Pengarang</th>
+              <td id="del-author"></td>
+            </tr>
+            <tr>
+              <th>Tahun</th>
+              <td id="del-year"></td>
+            </tr>
+          </table>
+          <div class="button-group popup-delete" id="popup-btn">
+            <button class="btn-remove" id="button-cancel"></button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <button class="btn-to-top" id="back-to-top"></button>
+      <p>
+        Website Project Submission ©2021,
+        <a target="_blank" href="https://www.instagram.com/radea_surya"
+          >RADEARSR</a
+        >
+      </p>
+    </footer>
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/domPopup.js"></script>
+    <script src="assets/js/dom.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
